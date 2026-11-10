@@ -1,11 +1,11 @@
 [package]
 name = "minipoa"
 version = "0.2.0"
-edition = "2021"
-rust-version = "1.89"
+edition = "2024"
+rust-version = "1.99"
 description = "Portable Rust partial order alignment, consensus, MSA and GFA"
 license = "MIT"
-repository = "https://github.com/NCl3-lhd/minipoa"
+repository = "https://github.com/jianshu93/minipoa-rs"
 
 [dependencies]
 # Stay on the requested clap 4.5 release series.
@@ -27,4 +27,3 @@ avx512 = []
 [profile.release]
 lto = "thin"
 codegen-units = 1
-
