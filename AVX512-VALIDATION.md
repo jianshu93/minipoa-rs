@@ -33,4 +33,4 @@ AVX512BW is required alongside AVX512F by the pinned `wide` 1.7.1 dependency's n
 
 The original eight-lane source tree was left unchanged. The copied eight-lane helper in this separate tree uses a lower shift-padding sentinel so unreachable carries cannot introduce artificial prefix candidates. It preserves reachable scores and output compatibility, as checked above.
 
-Run the native experiment from [AVX512.md](AVX512.md). No AVX-512 speedup is claimed until native measurements are available.
+Run the native experiment from [AVX512.md](AVX512.md).

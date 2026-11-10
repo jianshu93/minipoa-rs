@@ -1,10 +1,7 @@
-# minipoa-rs — separate AVX-512 effort
+# minipoa-rs
+Rust reimplementation of [minipoa](https://github.com/NCl3-lhd/minipoa) algorithm.
 
-This 0.2.0 source tree adds an optional dedicated sixteen-lane AVX-512 DP kernel. The original AVX2/NEON source tree remains separate. See [AVX512.md](AVX512.md) for Linux build and hardware-test instructions. Existing performance reports describe the earlier eight-lane implementation; no AVX-512 hardware speedup is claimed.
-
-Rust reimplementation of [minipoa 1.5.3](https://github.com/NCl3-lhd/minipoa), based on commit `0fc1e2a44839e2b6e978591fd7085c11ed95474a`.
-
-Includes a Rust library and `minipoa` executable. The alignment and graph algorithms are implemented in Rust; the program does not invoke or link the original C++ code.
+Includes a Rust library and `minipoa` executable. The alignment and graph algorithms are implemented in Rust.
 
 ## Build and run
 
