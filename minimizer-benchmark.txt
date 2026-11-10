@@ -1,0 +1,5 @@
+DNA bases: 1000000; rounds: 20; k: 19; w: 10; minimizers: 181917
+Scalar dependency extraction: 3.849 ns/base
+SIMD dependency extraction: 1.054 ns/base
+SIMD / scalar extraction speedup: 3.65x
+Full Rust sketch (DNA validation, packing, extraction, exact values): 1.928 ns/base

@@ -1,0 +1,30 @@
+[package]
+name = "minipoa"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.89"
+description = "Portable Rust partial order alignment, consensus, MSA and GFA"
+license = "MIT"
+repository = "https://github.com/NCl3-lhd/minipoa"
+
+[dependencies]
+# Stay on the requested clap 4.5 release series.
+clap = { version = "~4.5.60", features = ["derive"] }
+flate2 = "1"
+simd-minimizers = "=3.0.0"
+gfa = "0.10.1"
+wide = "=1.7.1"
+rayon = "=1.11.0"
+
+[features]
+# Permit compilation on CPUs without AVX2/NEON, using the dependency's fallback.
+scalar = ["simd-minimizers/scalar"]
+# Keep the original i64 dynamic programming kernel available for validation.
+scalar-dp = []
+# Dedicated 16-lane DP; enable AVX512F in RUSTFLAGS for native 512-bit code.
+avx512 = []
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
